@@ -1,5 +1,7 @@
 <div class="container my-4">
-  <%= link_to "All lists", lists_path %>
+  <%= link_to lists_path do %>
+    <i class="fas fa-undo-alt"></i><span>All lists</span>
+  <% end %>
   <div class="d-flex justify-content-center">
     <% @list.movies.each do |movie| %>
       <div class="col-4">
@@ -10,7 +12,7 @@
 
             <strong><%= movie.title %> <span > - <%= movie.rating %> <i class="fas fa-star star-yellow"></i></span></strong>
             <small><%= movie.overview %></small>
-            <div class="d-flex align-items-end justify-content-between pt-4">
+            <div class="d-flex align-items-end justify-content-between pt-2">
           
               <i class="fas fa-quote-left mr-2"></i><small class="flex-grow-1"><%= @bookmark.comment %></small>
               

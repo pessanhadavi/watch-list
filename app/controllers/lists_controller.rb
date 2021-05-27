@@ -8,6 +8,10 @@ class ListsController < ApplicationController
     @bookmark = Bookmark.find_by(list_id: params[:id])
   end
 
+  def new
+    @list = List.new
+  end
+
   private
 
   def set_list
