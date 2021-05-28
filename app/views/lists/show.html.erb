@@ -1,7 +1,14 @@
 <div class="container my-4">
-  <%= link_to lists_path do %>
-    <i class="fas fa-undo-alt"></i><span>All lists</span>
-  <% end %>
+    <div class="d-flex justify-content-around align-items-center">
+    <div>
+    <%= link_to lists_path do %>
+      <i class="fas fa-undo-alt"></i><span>All lists</span>
+    <% end %>
+    <span><h3>Bookmarks of the <%= @list.name %> list</h3></span>
+    </div>
+    <%= link_to 'Add a new bookmark', new_list_bookmark_path(@list), class: 'btn btn-warning' %>
+</div>
+ 
   <div class="d-flex justify-content-center">
     <% @list.movies.each do |movie| %>
       <div class="col-4">
