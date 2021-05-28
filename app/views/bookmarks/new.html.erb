@@ -3,7 +3,7 @@
   <h3>Make your bookmark in <%= @list.name %> list</h3>
   <%= simple_form_for [@list, @bookmark] do |f| %>
     <%= f.input :comment, placeholder: 'Comment about the movie' %>
-    <%= f.input :movie, collection: Movie.all, prompt: 'Select a movie' %>
+    <%= f.association :movie, collection: Movie.all, prompt: 'Select a movie' %>
     <div class="d-flex justify-content-between align-items-center">
       <%= f.submit class: 'btn btn-primary' %>
       <%= link_to list_path(@list) do %>

@@ -11,6 +11,7 @@
  
   <div class="d-flex justify-content-center">
     <% @list.movies.each do |movie| %>
+      <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
       <div class="col-4">
         <div class="bg-white shadow m-4">
 
@@ -21,8 +22,8 @@
             <small><%= movie.overview %></small>
             <div class="d-flex align-items-end justify-content-between pt-2">
           
-              <i class="fas fa-quote-left mr-2"></i><small class="flex-grow-1"><%= @bookmark.comment %></small>
-              <small class="text-right flex-shrink-0"><%= link_to '<i class="fa fa-trash"></i>'.html_safe, bookmark_path(@list), method: :delete, data: { confirm: "Are you sure?" } %></small>
+              <i class="fas fa-quote-left mr-2"></i><small class="flex-grow-1"><%= bookmark.comment %></small>
+              <small class="text-right flex-shrink-0"><%= link_to '<i class="fa fa-trash"></i>'.html_safe, bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" } %></small>
             </div>
           </div>
         </div>
