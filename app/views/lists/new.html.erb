@@ -1,7 +1,8 @@
 <div class="container my-4 col-4">
   <h3>Create your movie list</h3>
   <%= simple_form_for @list do |f| %>
-    <%= f.input :name, placeholder: 'Insert movie here' %>
+    <%= f.input :name, placeholder: 'Your list name here' %>
+    <%= f.input :photo, as: :file %>
 
     <div class="d-flex justify-content-between align-items-center">
       <%= f.submit class: 'btn btn-primary' %>
