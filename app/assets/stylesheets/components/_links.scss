@@ -1,0 +1,17 @@
+.delete-list-link {
+    pointer-events: none;
+    text-decoration: none;
+    color:#e97816;
+    opacity: 0;
+    transition: 0.4s;
+    &:hover {
+        color:#ff2600;
+    }
+}
+
+.list-link {
+    &:hover {
+        text-decoration: none;
+        box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    }
+}
