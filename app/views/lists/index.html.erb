@@ -18,6 +18,11 @@
             <%= list.name %>
           </div>
         <% end %>
+        <div class="d-flex justify-content-end delete-list">
+          <small class ="p-1">
+            <%= link_to '<i class="fa fa-trash"></i>'.html_safe, list_path(list), method: :delete, data: { confirm: "Are you sure?" } %>
+          </small>
+        </div>
       </div>
     <% end %>
   </div>
