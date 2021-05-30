@@ -22,6 +22,7 @@ class ListsController < ApplicationController
   end
 
   def destroy
+    @list.photo.purge
     @list.destroy
     redirect_to lists_path
   end
