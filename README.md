@@ -1,5 +1,5 @@
 # WatchList
-## It is a webApp where you can create lists of movies you like and comment about them.
+## It is a webApp where you can create lists of movies you like, bookmark and comment about them.
 
 ## Getting started
 1) Make sure that you have git properly set up in your machine and you have access to Github
