@@ -1,0 +1,32 @@
+.banner {
+  background-image: linear-gradient(rgba(0,0,0,0.23), rgba(0,0,0,0.30)), url("banner-movie.jpg");
+  background-size: cover;
+  padding: 210px 0;
+  color: white;
+  background-position: center;
+}
+
+.banner h1 {
+  text-shadow: 2px 1px 10px rgba(0, 0, 0, 0.4);
+  font-size: 70px;
+}
+
+.banner p {
+  font-size: 25px;
+  opacity: 0.7;
+  color: white;
+}
+
+.banner a {
+  background: #ff8418;
+  padding: 16px 36px;
+  border-radius: 30px;
+  display: inline-block;
+  margin-top: 15px;
+  color: white;
+}
+
+.banner a:hover {
+  background: #ff7700;
+  text-decoration: none;
+}
